@@ -19,14 +19,13 @@ class Lavoratore{
             cout << "Creato Lavoratore" << endl;
         };
 };
-class StudenteLavoratore: public Lavoratore, public Studente{
+class StudenteLavoratore: public Studente, public Lavoratore{
     //invertendo le ereditarietà lui invoca i costruttori in ordine diverso
     public:
         StudenteLavoratore(){
             cout << "Creato Studente Lavoratore" << endl;
         };
 };
-
 
 int main() {
     StudenteLavoratore s1;
